@@ -23,10 +23,10 @@ clientRouter.set('/admin', () => {
 })
 
 
-clientRouter.set('/admin/cem/update', () => {
+clientRouter.set('/admin/cem/update', async () => {
 	console.log('/admin/cem/update')
 	eToggleNav()
-	eHookUpdateCemForm()
+	await eHookUpdateCemForm()
 })
 
 

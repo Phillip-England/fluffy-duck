@@ -11,10 +11,10 @@ func Banner(title string, subtext string, isTogglable bool) string {
 		title = ""
 		icons = `
 			<div id='banner-toggle-icons' class='flex flex-row m-2 text-lightGray'>
-				<div id='banner-bars'>
+				<div id='banner-bars' class='cursor-pointer'>
 					<i class='fa-solid fa-bars fa-lg'></i>
 				</div>
-				<div id='banner-x' class='hidden'>
+				<div id='banner-x' class='hidden cursor-pointer'>
 					<i class='fa-solid fa-x fa-lg'></i>
 				</div>
 			</div>
