@@ -15,12 +15,12 @@ func CemFormSelector(name string, score string) string {
 		<div class='cem-update-score-row flex flex-row justify-between mx-2'>
 			<label class='text-sm'>%s</label>
 			<div class='flex flex-row items-center justify-evenly gap-6'>
-				<div class='cem-score-update-down-arrow border cursor-pointer border-lightGray rounded-full h-6 w-6 flex items-center justify-center'>
-					<i class='fa-solid fa-arrow-left fa-sm p-1'></i>
+				<div class='cem-score-update-toggle-button cem-score-update-down-arrow border cursor-pointer border-lightGray rounded-full h-6 w-6 flex items-center justify-center'>
+					<i class='fa-solid fa-arrow-left p-2'></i>
 				</div>
 				<input class='cem-score-update-input text-center w-8 text-sm bg-navy cursor-default focus:outline-none' value='%s' name='%s' readonly>
-				<div class='cem-score-update-up-arrow border cursor-pointer border-lightGray rounded-full h-6 w-6 flex items-center justify-center'>
-					<i class='fa-solid fa-arrow-right fa-sm p-1'></i>
+				<div  class='cem-score-update-toggle-button cem-score-update-up-arrow border cursor-pointer border-lightGray rounded-full h-6 w-6 flex items-center justify-center'>
+					<i class='fa-solid fa-arrow-right p-2'></i>
 				</div>
 			</div>
 		</div>

@@ -67,6 +67,24 @@ var eHookUpdateCemForm = async () => {
   console.log("hooking event: eUpdateCemForm");
   const cemUpdateSubmit = getById("update-cem-form-submit");
   const scoreRows = getByClass("cem-update-score-row");
+  const toggleButtons = getByClass("cem-score-update-toggle-button");
+  console.log(toggleButtons);
+  for (let i = 0;i < toggleButtons.length; i++) {
+    const currentButton = toggleButtons[i];
+    currentButton.addEventListener("click", (e) => {
+      currentButton.classList.add("bg-green");
+      currentButton.classList.add("text-navy");
+      currentButton.classList.add("border-green");
+      for (let i2 = 0;i2 < toggleButtons.length; i2++) {
+        const anotherCurrentButton = toggleButtons[i2];
+        if (anotherCurrentButton != currentButton) {
+          anotherCurrentButton.classList.remove("bg-green");
+          anotherCurrentButton.classList.remove("text-navy");
+          anotherCurrentButton.classList.remove("border-green");
+        }
+      }
+    });
+  }
   for (let i = 0;i < scoreRows.length; i++) {
     const row = scoreRows[i];
     const downButton = row.querySelector(".cem-score-update-down-arrow");
@@ -80,7 +98,7 @@ var eHookUpdateCemForm = async () => {
       }
     });
     upButton.addEventListener("click", () => {
-      cemUpdateSubmit.scrollIntoView({ behavior: "smooth" });
+      cemUpdateSubmit.scrollIntoView({ behavior: "auto" });
       const currentScore = Number(input.value);
       if (currentScore + 1 < 101) {
         input.value = String(currentScore + 1);
