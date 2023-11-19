@@ -11,16 +11,16 @@ npm install
 ```
 
 # Environment Variables
-This project relies on a number of local environment variables. Here is a list of the variables you will need to set. They are written in the following format: VARIABLE_NAME=description of variable
+This project relies on a number of local environment variables. Here is a list of the variables you will need to set. Most of them should be straightforward. the username and passwords can be whatever you'd like. The tokens can be as well. the FONTAWEOMSE_SRC can be found in your fontaweomse script tag in the src attribute. If you don't include one, icons will not be present in the app. Just go to fontawesomes website and get a free tag. Then the postgres connection string will be the url to your postgres db. You can find free options online for testing purposes if needed or you can run locally via postgres or docker.
 ```bash
-TEAM_USERNAME=a username for your team members
-TEAM_PASSWORD=a password for your team members
-TEAM_SESSION_TOKEN=a session token for your team members
-ADMIN_USERNAME=a username for your admins
-ADMIN_PASSWORD=a password for your admins
-ADMIN_SESSION_TOKEN=a session token for your admins
-FONTAWESOME_SRC=a fontawesome src value as provided by fontaweomse.com for icons
-POSTGRES_CONNECTION_STRING=a postgres database connection string
+TEAM_USERNAME=
+TEAM_PASSWORD=
+TEAM_SESSION_TOKEN=
+ADMIN_USERNAME=
+ADMIN_PASSWORD=
+ADMIN_SESSION_TOKEN=
+FONTAWESOME_SRC=
+POSTGRES_CONNECTION_STRING=
 ```
 
 # Bundling
