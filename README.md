@@ -11,14 +11,16 @@ npm install
 ```
 
 # Environment Variables
-This project relies on a number of local environment variables. Here is a list of the variables you will need to set.
+This project relies on a number of local environment variables. Here is a list of the variables you will need to set. They are written in the following format: VARIABLE_NAME=description of variable
 ```bash
-TEAM_USERNAME=
-TEAM_PASSWORD=
-TEAM_SESSION_TOKEN=
-ADMIN_USERNAME=
-ADMIN_PASSWORD=
-ADMIN_SESSION_TOKEN=
+TEAM_USERNAME=a username for your team members
+TEAM_PASSWORD=a password for your team members
+TEAM_SESSION_TOKEN=a session token for your team members
+ADMIN_USERNAME=a username for your admins
+ADMIN_PASSWORD=a password for your admins
+ADMIN_SESSION_TOKEN=a session token for your admins
+FONTAWESOME_SRC=a fontawesome src value as provided by fontaweomse.com for icons
+POSTGRES_CONNECTION_STRING=a postgres database connection string
 ```
 
 # Bundling
