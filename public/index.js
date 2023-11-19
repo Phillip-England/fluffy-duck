@@ -65,6 +65,7 @@ var getByClass = (elementClassName) => {
 // client/events/eHookUpdateCemForm.ts
 var eHookUpdateCemForm = async () => {
   console.log("hooking event: eUpdateCemForm");
+  const cemUpdateSubmit = getById("update-cem-form-submit");
   const scoreRows = getByClass("cem-update-score-row");
   for (let i = 0;i < scoreRows.length; i++) {
     const row = scoreRows[i];
@@ -72,12 +73,14 @@ var eHookUpdateCemForm = async () => {
     const upButton = row.querySelector(".cem-score-update-up-arrow");
     const input = row.querySelector(".cem-score-update-input");
     downButton.addEventListener("click", () => {
+      cemUpdateSubmit.scrollIntoView({ behavior: "smooth" });
       const currentScore = Number(input.value);
       if (currentScore - 1 > -1) {
         input.value = String(currentScore - 1);
       }
     });
     upButton.addEventListener("click", () => {
+      cemUpdateSubmit.scrollIntoView({ behavior: "smooth" });
       const currentScore = Number(input.value);
       if (currentScore + 1 < 101) {
         input.value = String(currentScore + 1);
