@@ -16,5 +16,5 @@ func LanguageToggle(c *gin.Context) {
 	} else {
 		c.SetCookie("language", "english", 3600, "/", "", false, true)
 	}
-	c.Redirect(301, path)
+	c.Redirect(302, path)
 }
